@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('user/{id}', UserController::class);
 
 Route::fallback(function () {
     return '404 Not Found';
